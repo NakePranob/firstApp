@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import {StyleSheet, View, Image, Text } from 'react-native';
 
 const Flex = () => {
   return (
@@ -11,8 +11,23 @@ const Flex = () => {
           flexDirection: 'column',
         },
       ]}>
-      <View style={{flex: 2, backgroundColor: 'red'}} />
-      <View style={{flex: 1, backgroundColor: 'darkorange'}} />
+      <View style={{flex: 2, backgroundColor: 'white',
+        justifyContent: 'center', alignItems: 'center'
+      }} >
+        <Image
+          source={require('./assets/lru.png')}
+          resizeMode="contain"
+          style={{width: 120, height: 160}}
+        />
+      </View>
+      <View style={{flex: 1, backgroundColor: 'white',
+        justifyContent: 'center', alignItems: 'center'
+      }} >
+        <Text style={{fontSize: 20, fontWeight: 'bold'}}>
+        มหาวิทยาลัยราชภัฏเลย</Text>
+        <Text style={{fontSize: 12}}>
+        Loei Rajabhat University</Text>
+      </View>
       <View style={{flex: 3, backgroundColor: 'green'}} />
     </View>
   );
